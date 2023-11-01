@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: allure_results
+          name: allure_report
           path: |
             build/allure-results/
             build/reports/allure-report/allureReport/

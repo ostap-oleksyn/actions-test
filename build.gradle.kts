@@ -42,6 +42,10 @@ tasks.test {
     useJUnitPlatform()
 
     testLogging {
+        showStandardStreams = true
+        showStackTraces = true
+        showExceptions = true
+        showCauses = true
         events("STARTED", "PASSED", "SKIPPED", "FAILED", "STANDARD_OUT")
     }
 }
