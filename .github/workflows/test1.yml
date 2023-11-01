@@ -1,0 +1,27 @@
+name: test1
+
+on: workflow_dispatch
+
+jobs:
+  execute_tests:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup java
+        uses: actions/setup-java@v3
+        with:
+            distribution: 'temurin'
+            java-version: '11'
+
+      - name: Run tests
+        run: ./gradlew test
+
+      - name: Save allure report
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure_report
+          path: build/allure-results
+
