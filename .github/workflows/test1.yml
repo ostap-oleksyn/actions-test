@@ -22,6 +22,9 @@ jobs:
       - name: Run tests
         run: ./gradlew test
 
+      - name: Generate allure report
+        run: ./gradlew allureReport
+
       - name: Save allure report
         uses: actions/upload-artifact@v3
         if: always()
