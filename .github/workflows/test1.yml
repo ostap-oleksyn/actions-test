@@ -13,8 +13,8 @@ jobs:
       - name: Setup java
         uses: actions/setup-java@v3
         with:
-            distribution: 'temurin'
-            java-version: '11'
+          distribution: 'temurin'
+          java-version: '11'
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
@@ -26,6 +26,8 @@ jobs:
         uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: allure_report
-          path: build/allure-results
+          name: allure_results
+          path: |
+            build/allure-results/
+            build/reports/allure-report/allure-report/
 
