@@ -24,6 +24,7 @@ jobs:
 
       - name: Save allure report
         uses: actions/upload-artifact@v3
+        if: always()
         with:
           name: allure_report
           path: build/allure-results
