@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class AppPage {
 
-    private final SelenideElement dropdown = $("#dropdown");
+    private final SelenideElement dropdown = $("#dropdown1");
 
     @Step("Selected dropdown option {text}")
     public AppPage selectOption(String text) {

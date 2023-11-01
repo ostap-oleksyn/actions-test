@@ -33,5 +33,5 @@ jobs:
           name: allure_results
           path: |
             build/allure-results/
-            build/reports/allure-report/allure-report/
+            build/reports/allure-report/allureReport/
 
